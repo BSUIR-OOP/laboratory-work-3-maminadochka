@@ -150,7 +150,7 @@ namespace Serialization
                             return;
                         }
 
-                        elementofListType.GetProperty(FieldFullName).SetValue(obj, value, null); // нету приведения к типу 
+                        elementofListType.GetProperty(FieldFullName).SetValue(obj, value, null); 
                         str = streamReader.ReadLine();
                         FieldFullName = GetName(str);
                     }
@@ -295,8 +295,6 @@ namespace Serialization
                             DeSerializeList2(reader, clearName, (IList)currentList[j], listItemsType);
                             ++j;
                         }
-
-                            /////////
                         
                         
                         currentStr = reader.ReadLine();
@@ -552,7 +550,6 @@ namespace Serialization
 
         private void button4_Click(object sender, EventArgs e)
         {
-            //DeSerialize(path);
             Deserialize2(path);
         }
 
